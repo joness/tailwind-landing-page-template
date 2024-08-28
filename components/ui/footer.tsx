@@ -209,6 +209,23 @@ export default function Footer({ border = false }: { border?: boolean }) {
           <div className="h-56 w-56 rounded-full border-[20px] border-blue-700 blur-[80px]"></div>
         </div>
       </div>
+      <script>
+      (function(d,t) {
+        var BASE_URL="http://chatwoot-sgk0o48s0wckscwgo444g88o.31.129.59.28.sslip.io";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: '8rsDChbYGxXdUsUky4zwjt1u',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+    
     </footer>
   );
 }
